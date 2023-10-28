@@ -17,6 +17,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.2.0",
     "@nx/cypress": "17.0.2",
     "@nx/eslint": "17.0.2",
     "@nx/eslint-plugin": "17.0.2",
@@ -37,6 +38,7 @@
     "@vitest/coverage-c8": "~0.32.0",
     "@vitest/ui": "~0.32.0",
     "commitizen": "^4.3.0",
+    "commitlint-config-cz": "^0.13.3",
     "cypress": "^13.0.0",
     "cz-customizable": "^7.0.0",
     "eslint": "~8.46.0",
