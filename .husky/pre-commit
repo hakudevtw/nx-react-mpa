@@ -1,6 +1,13 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+branch="$(git rev-parse --abbrev-ref HEAD)"
+if [ "$branch" = "master" ] || [ "$branch" = "main" ]; then
+  echo "❌ Aborting commit...\n"
+  echo "💀 You can't commit directly to master or main branch!\n"
+  exit 1
+fi
+
 # echo "🚀 Linting affected workspaces..."
 # pnpm lint
 
