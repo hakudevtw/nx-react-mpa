@@ -1,6 +1,6 @@
 /** @type {import('cz-git').UserConfig} */
-const { getTypeName } = require('./utils');
-const { commitTypes } = require('./custom');
+const { formatTypeEnums, formatTypes } = require('./utils');
+const { commitTypes, scopes } = require('./custom');
 
 module.exports = {
   parserPreset: {
@@ -26,11 +26,7 @@ module.exports = {
     'subject-full-stop': [2, 'never', '.'],
     'type-case': [2, 'always', 'lower-case'],
     'type-empty': [2, 'never'],
-    'type-enum': [
-      2,
-      'always',
-      commitTypes.map(({ label, emoji }) => getTypeName(label, emoji)),
-    ],
+    'type-enum': [2, 'always', formatTypeEnums(commitTypes)],
   },
   prompt: {
     alias: { fd: 'docs: fix typos' },
@@ -46,12 +42,8 @@ module.exports = {
       footer: 'List any ISSUES by this change. E.g.: #31, #34:\n',
       confirmCommit: 'Are you sure you want to proceed with the commit above?',
     },
-    types: commitTypes.map(({ label, emoji, desc }) => ({
-      value: label,
-      name: desc,
-      emoji: emoji,
-    })),
-    scopes: [],
+    types: formatTypes(commitTypes),
+    scopes,
     useEmoji: true,
     emojiAlign: 'left',
     allowBreakingChanges: ['feat', 'fix'],
