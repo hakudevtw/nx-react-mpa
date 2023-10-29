@@ -8,20 +8,13 @@ module.exports = {
   prompt: {
     alias: { fd: 'docs: fix typos' },
     messages: {
-      type: "Select the type of change that you're committing:",
-      scope: 'Denote the SCOPE of this change (optional):',
-      customScope: 'Denote the SCOPE of this change:',
-      subject: 'Write a SHORT, IMPERATIVE tense description of the change:\n',
-      body: 'Provide a LONGER description of the change (optional). Use "|" to break new line:\n',
-      breaking:
-        'List any BREAKING CHANGES (optional). Use "|" to break new line:\n',
-      footerPrefixesSelect:
-        'Select the ISSUES type of changeList by this change (optional):',
-      customFooterPrefix: 'Input ISSUES prefix:',
-      footer: 'List any ISSUES by this change. E.g.: #31, #34:\n',
-      generatingByAI: 'Generating your AI commit subject...',
-      generatedSelectByAI: 'Select suitable subject by AI generated:',
-      confirmCommit: 'Are you sure you want to proceed with the commit above?',
+      type: '選擇提交類型 :',
+      scope: '選擇提交範圍（可選）:',
+      customScope: '輸入自訂提交範圍 :',
+      subject: '填寫簡短的變更描述 :\n',
+      body: '填寫更詳細的變更描述（可選）。使用 "|" 換行 :\n',
+      footer: '列出此次修改後，要關閉的 ISSUES (可選) 例如: #31, #I3244 :\n',
+      confirmCommit: '是否提交或修改 commit ?',
     },
     types: [
       {
