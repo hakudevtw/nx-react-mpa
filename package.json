@@ -7,11 +7,6 @@
     "commit": "czg"
   },
   "private": true,
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-git"
-    }
-  },
   "dependencies": {
     "@swc/helpers": "~0.5.2",
     "react": "18.2.0",
@@ -39,7 +34,6 @@
     "@vitejs/plugin-react": "~4.0.0",
     "@vitest/coverage-c8": "~0.32.0",
     "@vitest/ui": "~0.32.0",
-    "commitizen": "^4.3.0",
     "cypress": "^13.0.0",
     "cz-git": "^1.7.1",
     "czg": "^1.7.1",
