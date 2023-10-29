@@ -25,7 +25,7 @@ module.exports = {
         name: '✨ feat:     需求異動時，新增/修改功能（ Ex. 功能或規格變更, 刪除檔案 ）',
         emoji: ':sparkles:',
       },
-      { value: 'fix', name: '🚧 fix:      修補 bug', emoji: ':construction:' },
+      { value: 'fix', name: '🐞 fix:      修補 bug', emoji: ':lady_beetle:' },
       {
         value: 'docs',
         name: '📝 docs:     新增/修改文件',
@@ -38,8 +38,8 @@ module.exports = {
       },
       {
         value: 'refactor',
-        name: '🤖 refactor: 重構，不是新增功能或修補 bug 的程式碼變動',
-        emoji: ':robot:',
+        name: '🦄 refactor: 重構，不是新增功能或修補 bug 的程式碼變動',
+        emoji: ':unicorn:',
       },
       {
         value: 'perf',
@@ -63,8 +63,8 @@ module.exports = {
       },
       {
         value: 'chore',
-        name: '🛠️  chore:    建構程序或輔助工具的變動（ Ex. 版本更新, 建制環境 ）',
-        emoji: ':hammer_and_pick:',
+        name: '🐳 chore:    建構程序或輔助工具的變動（ Ex. 版本更新, 建制環境 ）',
+        emoji: '🐳',
       },
       {
         value: 'revert',
@@ -74,10 +74,10 @@ module.exports = {
     ],
     scopes: [],
     useEmoji: true,
-    // emojiAlign: 'left',
     allowBreakingChanges: ['feat', 'fix'],
     issuePrefixes: [{ value: 'closed', name: 'closed: 標記 ISSUES 已完成' }],
 
+    // emojiAlign: 'center',
     // themeColorCode: '',
     // allowCustomScopes: true,
     // customScopesAlign: 'bottom',
