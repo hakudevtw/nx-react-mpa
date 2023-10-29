@@ -1,5 +1,51 @@
 // .commitlintrc.js
 /** @type {import('cz-git').UserConfig} */
+
+const getTypeName = (label, emoji) => `${emoji} ${label}`;
+
+const commitTypes = [
+  { label: 'init', emoji: '🎉', desc: '🎉 init:     初始化' },
+  {
+    label: 'feat',
+    emoji: '✨',
+    desc: '✨ feat:     需求異動時，新增/修改功能（ Ex. 功能或規格變更, 刪除檔案 ）',
+  },
+  { label: 'fix', emoji: '🐞', desc: '🐞 fix:      修補 bug' },
+  { label: 'docs', emoji: '📝', desc: '📝 docs:     新增/修改文件' },
+  {
+    label: 'style',
+    emoji: '💄',
+    desc: '💄 style:    格式調整，但不影響程式碼運行的變動（ Ex. formatting ）',
+  },
+  {
+    label: 'refactor',
+    emoji: '🦄',
+    desc: '🦄 refactor: 重構，不是新增功能或修補 bug 的程式碼變動',
+  },
+  { label: 'perf', emoji: '⚡️', desc: '⚡️ perf:     改善效能的修改' },
+  { label: 'test', emoji: '🧪', desc: '🧪 test:     新增或修改測試' },
+  {
+    label: 'build',
+    emoji: '📦️',
+    desc: '📦️ build:    影響構建系統或外部依賴的修改',
+  },
+  {
+    label: 'ci',
+    emoji: '🚀',
+    desc: '🚀 ci:       調整 CI 相關的設定檔案 Scripts',
+  },
+  {
+    label: 'chore',
+    emoji: '🐳',
+    desc: '🐳 chore:    建構程序或輔助工具的變動（ Ex. 版本更新, 建制環境 ）',
+  },
+  {
+    label: 'revert',
+    emoji: '⏪️',
+    desc: '⏪️ revert:   撤銷回覆先前的 commit',
+  },
+];
+
 module.exports = {
   parserPreset: {
     parserOpts: {
@@ -27,20 +73,7 @@ module.exports = {
     'type-enum': [
       2,
       'always',
-      [
-        '🎉 init',
-        '✨ feat',
-        '🐞 fix',
-        '📝 docs',
-        '💄 style',
-        '🦄 refactor',
-        '⚡️ perf',
-        '🧪 test',
-        '📦️ build',
-        '🚀 ci',
-        '🐳 chore',
-        '⏪️ revert',
-      ],
+      commitTypes.map(({ label, emoji }) => getTypeName(label, emoji)),
     ],
   },
   prompt: {
@@ -57,64 +90,11 @@ module.exports = {
       footer: 'List any ISSUES by this change. E.g.: #31, #34:\n',
       confirmCommit: 'Are you sure you want to proceed with the commit above?',
     },
-    types: [
-      {
-        value: 'feat',
-        name: '✨ feat:     需求異動時，新增/修改功能（ Ex. 功能或規格變更, 刪除檔案 ）',
-        emoji: ':sparkles:',
-      },
-      { value: 'fix', name: '🐞 fix:      修補 bug', emoji: '🐞' },
-      {
-        value: 'docs',
-        name: '📝 docs:     新增/修改文件',
-        emoji: '📝',
-      },
-      {
-        value: 'style',
-        name: '💄 style:    格式調整，但不影響程式碼運行的變動（ Ex. formatting ）',
-        emoji: '💄',
-      },
-      {
-        value: 'refactor',
-        name: '🦄 refactor: 重構，不是新增功能或修補 bug 的程式碼變動',
-        emoji: '🦄',
-      },
-      {
-        value: 'perf',
-        name: '⚡️ perf:     改善效能的修改',
-        emoji: '⚡️',
-      },
-      {
-        value: 'test',
-        name: '🧪 test:     新增或修改測試',
-        emoji: '🧪',
-      },
-      {
-        value: 'build',
-        name: '📦️ build:    影響構建系統或外部依賴的修改',
-        emoji: '📦️',
-      },
-      {
-        value: 'ci',
-        name: '🚀 ci:       調整 CI 相關的設定檔案 Scripts',
-        emoji: '🚀',
-      },
-      {
-        value: 'chore',
-        name: '🐳 chore:    建構程序或輔助工具的變動（ Ex. 版本更新, 建制環境 ）',
-        emoji: '🐳',
-      },
-      {
-        value: 'revert',
-        name: '⏪️ revert:   撤銷回覆先前的 commit',
-        emoji: '⏪️',
-      },
-      {
-        value: 'init',
-        name: '🎉 init:   初始化',
-        emoji: '🎉',
-      },
-    ],
+    types: commitTypes.map(({ label, emoji, desc }) => ({
+      value: label,
+      name: desc,
+      emoji: emoji,
+    })),
     scopes: [],
     useEmoji: true,
     emojiAlign: 'left',
