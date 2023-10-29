@@ -1,7 +1,6 @@
 // .commitlintrc.js
 /** @type {import('cz-git').UserConfig} */
 module.exports = {
-  // extends: ['@commitlint/config-conventional'],
   parserPreset: {
     parserOpts: {
       headerPattern:
@@ -109,6 +108,11 @@ module.exports = {
         value: 'revert',
         name: '⏪️ revert:   撤銷回覆先前的 commit',
         emoji: ':rewind:',
+      },
+      {
+        value: 'init',
+        name: '🎉 init:   初始化',
+        emoji: ':tada:',
       },
     ],
     scopes: [],
