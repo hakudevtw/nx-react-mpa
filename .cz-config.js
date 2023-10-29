@@ -51,17 +51,6 @@ module.exports = {
   //   ],
   // },
 
-  messages: {
-    type: '選擇要提交的類型:',
-    scope: '請輸入修改範圍 (選填):',
-    // used if allowCustomScopes is true
-    customScope: '請輸入修改範圍 (選填):',
-    subject: '請簡述要提交的內容:',
-    body: '請輸入詳細的描述內容，用 "|" 來換行 (選填):\n',
-    footer: '列出此次修改後，要關閉的 ISSUES，例如: #31, #34 (選填):',
-    confirmCommit: '確認要使用以上的訊息提交 (y/n)',
-  },
-
   allowCustomScopes: true,
   allowBreakingChanges: ['feat', 'fix'],
 };
