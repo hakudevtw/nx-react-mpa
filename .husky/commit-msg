@@ -1,5 +1,20 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-echo "🚀 Checking commit message ..."
+function echo_in_box() {
+  message="$1"
+  edge="="
+  width=${#message}
+  
+  # Top edge of the box
+  echo "$edge$edge$edge$edge$edge$edge$edge$edge$edge$edge$edge$edge$edge$edge$edge$edge$edge$edge$edge$edge$edge"
+  
+  # Message with padding
+  echo "$edge  $message  $edge"
+  
+  # Bottom edge of the box
+  echo "$edge$edge$edge$edge$edge$edge$edge$edge$edge$edge$edge$edge$edge$edge$edge$edge$edge$edge$edge$edge$edge"
+}
+
+echo_in_box "🚀 Checking commit message ..."
 npx --no -- commitlint --edit ${1}
