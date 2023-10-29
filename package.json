@@ -4,12 +4,12 @@
   "license": "MIT",
   "scripts": {
     "prepare": "husky install",
-    "commit": "cz"
+    "commit": "czg"
   },
   "private": true,
   "config": {
     "commitizen": {
-      "path": "cz-conventional-changelog"
+      "path": "node_modules/cz-git"
     }
   },
   "dependencies": {
@@ -41,7 +41,8 @@
     "@vitest/ui": "~0.32.0",
     "commitizen": "^4.3.0",
     "cypress": "^13.0.0",
-    "cz-conventional-changelog": "^3.3.0",
+    "cz-git": "^1.7.1",
+    "czg": "^1.7.1",
     "eslint": "~8.46.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-cypress": "^2.13.4",

@@ -81,9 +81,12 @@ devDependencies:
   cypress:
     specifier: ^13.0.0
     version: 13.0.0
-  cz-conventional-changelog:
-    specifier: ^3.3.0
-    version: 3.3.0(typescript@5.1.3)
+  cz-git:
+    specifier: ^1.7.1
+    version: 1.7.1
+  czg:
+    specifier: ^1.7.1
+    version: 1.7.1
   eslint:
     specifier: ~8.46.0
     version: 8.46.0
@@ -4579,6 +4582,17 @@ packages:
       '@commitlint/load': 18.2.0(typescript@5.1.3)
     transitivePeerDependencies:
       - typescript
+    dev: true
+
+  /cz-git@1.7.1:
+    resolution: {integrity: sha512-NMe4REukCS7op1YA1jixRXOgII8Um2/Ii8TeyFEOISgp2ZzeobzkMOP8dXSrTQ3bvmm7YpPOdr2301yJkOJcbA==}
+    engines: {node: '>=v12.20.0'}
+    dev: true
+
+  /czg@1.7.1:
+    resolution: {integrity: sha512-KP93cTbZxgWYDKJzZpjnLe0sy/2FwyegatnrOaqsath04WinvsdhZl5QCGkxTKBY2DavpKloIBW/WGZzCKmrlA==}
+    engines: {node: '>=v12.20.0'}
+    hasBin: true
     dev: true
 
   /damerau-levenshtein@1.0.8:
