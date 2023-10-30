@@ -1,8 +1,13 @@
 {
   "name": "@nx-react-mpa/source",
-  "version": "0.0.0",
+  "description": "React MPA Monorepo",
   "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0",
+    "pnpm": ">=3"
+  },
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",
     "commit": "czg"
   },
