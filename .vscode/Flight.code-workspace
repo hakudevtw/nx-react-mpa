@@ -1,12 +1,20 @@
 {
   "folders": [
     {
-      "name": "🏠 Root",
+      "name": "🚧 Root",
       "path": "../"
     },
     {
-      "name": "🛩️ Flight-App",
+      "name": "🛩️ Flight App",
       "path": "../apps/flight"
+    },
+    {
+      "name": "🧪 Flight e2e",
+      "path": "../apps/flight-e2e"
+    },
+    {
+      "name": "🗂️ Flight Library",
+      "path": "../libs/projects/flight"
     }
   ],
   "settings": {
