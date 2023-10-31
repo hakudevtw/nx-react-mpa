@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "name": "🏠 Root",
+      "path": "../"
+    },
+    {
+      "name": "🛩️ Flight-App",
+      "path": "../apps/flight"
+    }
+  ],
+  "settings": {
+    "workbench.colorCustomizations": {},
+    "files.exclude": {
+      "node_modules/": true,
+      ".nx/": true
+    }
+  }
+}
